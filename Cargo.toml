@@ -3,9 +3,22 @@ name = "findle"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "findle"
+path = "src/lib.rs"
+
+[[bin]]
+name = "findle"
+path = "src/main.rs"
+
+[[bin]]
+name = "findle-gui"
+path = "src/gui.rs"
+
 [dependencies]
 clap = { version = "4", features = ["derive"] }
 toml = "0.8"
 serde = { version = "1", features = ["derive"] }
 glob = "0.3"
 anyhow = "1"
+eframe = "0.27"
